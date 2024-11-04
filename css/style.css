@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#background_color {
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(21, 91, 41, 0.316);
+}
+
+.body_index::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/amazonia2.jpg") center/cover no-repeat;
+    z-index: -1;
+}
+
+#nav_bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.863);
+    padding: 0 20px;
+}
+
+#menu_h {
+    list-style: none;
+    font-family: "Libre Baskerville", serif;
+    display: flex;
+    margin-left: auto;
+}
+
+#menu_h li {
+    display: inline;
+}
+
+#menu_h li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 16px;
+    display: inline-block;
+    transition: background .4s;
+}
+
+#menu_h li a:hover {
+    background-color: rgb(31, 94, 46);
+}
+
+
+
+.icon_tree {
+    display: flex;
+    align-items:center;
+}
+
+.icon_tree img {
+    height: 40px;
+    width: auto;
+    padding-left: 0;
+}
+
+#main_title {
+    font-size: 60px;
+    color: rgb(250, 250, 250);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 110px; /* Ajuste conforme necessário */
+}
+
+#search_container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 20px auto 0 auto; /* Ajuste o valor de 20px conforme necessário */
+    text-decoration: none;
+    border: none;
+    color:white;
+}
+
+.search {
+    flex: 1;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 1.5;
+}
+
+.search_button {
+    background-color: rgb(31, 94, 46);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 300px;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.search_button:hover {
+    background-color: #163d2a;
+}
+
+/*Código da aba de paisagens*/
+.intro {
+    height: 40vh;
+    background-image: url(../images/fundo_verde.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: left;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+.text_container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.intro h1 {
+ font-size: 60px;
+}
+
+.intro p {
+    font-size: 18px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.instances {
+    display: flex;
+    align-items: flex-start; /* Alinha todas as instâncias pelo topo */;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #fdfaf6;
+    padding-bottom: 10%;
+}
+
+.instance {
+    margin-top: 2%;
+    text-align:center;
+    width: 250px;
+}
+
+.instance img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 10px 0; /* Espaçamento uniforme acima e abaixo da imagem */
+    border-color: black;
+}
+
+.instance p {
+    text-align: justify;
+    margin-top: 5%;
+    font-size: 17px;
+
+}
+
+.instance button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: rgb(31, 94, 46);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+
+
+}
+
+.instance button a {
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+}
+
+.instance h3 {
+    font-size: 22px;
+    margin-top: 0; /* Remove margem superior */
+    margin-bottom: 10px; /* Adiciona margem inferior para espaçamento consistente */
+}
+
+.instance button:hover {
+    background-color: #a33;
+}
+
+
+
+ 

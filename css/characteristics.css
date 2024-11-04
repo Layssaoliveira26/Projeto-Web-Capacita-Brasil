@@ -1,0 +1,102 @@
+
+/*Estilização da aba Caracteristicas*/
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para a seção .intro */
+.intro_char {
+    height: 40vh;
+    background-image: url(../images/fundo_verde.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+.intro_char h1 {
+    font-size: 60px;
+}
+
+.intro_char p {
+    font-size: 18px;
+    font-family: "Libre Baskerville", serif;
+    color: white;
+}
+
+/* Estilo para a seção .location_block */
+.location_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #072907;
+    color: white;
+    margin: 0 auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+/* Texto e imagem dentro da localização */
+.location_text {
+    flex: 1;
+    padding: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.location_text h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.location_text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.mapa_image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+table {
+    width: 72%;
+    border-collapse: collapse;
+    margin: 40px auto;
+}
+th, td {
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #87b133f7;
+}
+
+h3 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
