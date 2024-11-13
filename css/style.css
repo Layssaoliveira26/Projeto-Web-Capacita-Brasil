@@ -9,6 +9,7 @@ html, body {
     width: 100%;
 }
 
+/* Fundo sem mudanças */
 #background_color {
     inset: 0;
     position: absolute;
@@ -16,6 +17,7 @@ html, body {
     background-color: rgba(21, 91, 41, 0.316);
 }
 
+/* Background da imagem no body */
 .body_index::before {
     content: "";
     position: absolute;
@@ -25,6 +27,7 @@ html, body {
     z-index: -1;
 }
 
+/* Barra de navegação */
 #nav_bar {
     display: flex;
     justify-content: space-between;
@@ -32,13 +35,18 @@ html, body {
     align-items: center;
     background-color: rgba(10, 10, 10, 0.863);
     padding: 0 20px;
+    /* Tornar a barra responsiva em telas menores */
+    flex-wrap: wrap;
 }
 
+/* Menu horizontal */
 #menu_h {
     list-style: none;
     font-family: "Libre Baskerville", serif;
     display: flex;
     margin-left: auto;
+    /* Ajuste para telas menores */
+    flex-wrap: wrap;
 }
 
 #menu_h li {
@@ -54,11 +62,17 @@ html, body {
     transition: background .4s;
 }
 
+/* Alteração do tamanho da fonte do menu para telas menores */
+@media (max-width: 600px) {
+    #menu_h li a {
+        font-size: 9px;
+        padding: 8px;
+    }
+}
+
 #menu_h li a:hover {
     background-color: rgb(31, 94, 46);
 }
-
-
 
 .icon_tree {
     display: flex;
@@ -71,14 +85,23 @@ html, body {
     padding-left: 0;
 }
 
+/* Título principal */
 #main_title {
     font-size: 60px;
     color: rgb(250, 250, 250);
     font-family: 'Lato', sans-serif;
     text-align: center;
-    margin-top: 110px; /* Ajuste conforme necessário */
+    margin-top: 110px;
 }
 
+/* Ajustar fonte para telas menores */
+@media (max-width: 768px) {
+    #main_title {
+        font-size: 40px;
+    }
+}
+
+/* Barra de pesquisa */
 #search_container {
     display: flex;
     align-items: center;
@@ -87,10 +110,22 @@ html, body {
     padding: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 650px;
-    margin: 20px auto 0 auto; /* Ajuste o valor de 20px conforme necessário */
-    text-decoration: none;
-    border: none;
-    color:white;
+    margin: 20px auto 0 auto;
+}
+
+#main {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+@media(max-width: 768px){
+    #main {
+        min-height: 60vh;
+    }
 }
 
 .search {
@@ -104,8 +139,10 @@ html, body {
     border-radius: 10px;
     height: 40px;
     line-height: 1.5;
+    justify-content: center;
 }
 
+/* Alteração para centralizar o botão de pesquisa */
 .search_button {
     background-color: rgb(31, 94, 46);
     border: none;
@@ -114,27 +151,29 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 300px;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
+    margin-left: 300px; /* Reduzi o espaçamento para melhor encaixar em telas menores */
+    justify-content: center;
 }
 
 .search_button:hover {
     background-color: #163d2a;
 }
 
-/*Código da aba de paisagens*/
+/* Seção intro */
 .intro {
     height: 40vh;
     background-image: url(../images/fundo_verde.png);
     background-size: cover;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     color: white;
     text-align: left;
     padding: 0 30px;
     margin-bottom: 50px;
+    justify-content: center;
+    /* Melhor adaptação para telas pequenas */
+    flex-direction: column;
+    text-align: left;
 }
 
 .text_container {
@@ -146,18 +185,28 @@ html, body {
  font-size: 60px;
 }
 
+/* Ajustar fonte para telas menores */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 40px;
+    }
+}
+
 .intro p {
     font-size: 18px;
     font-family: "Libre Baskerville", serif;
 }
 
+/* Ajustar a seção de instâncias */
 .instances {
     display: flex;
-    align-items: flex-start; /* Alinha todas as instâncias pelo topo */;
+    align-items: flex-start;
     text-align: center;
     justify-content: space-around;
     background-color: #fdfaf6;
     padding-bottom: 10%;
+    /* Empilhar colunas para telas menores */
+    flex-wrap: wrap;
 }
 
 .instance {
@@ -166,11 +215,12 @@ html, body {
     width: 250px;
 }
 
+/* Ajuste de imagem dentro das instâncias */
 .instance img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    margin: 10px 0; /* Espaçamento uniforme acima e abaixo da imagem */
+    margin: 10px 0;
     border-color: black;
 }
 
@@ -178,7 +228,6 @@ html, body {
     text-align: justify;
     margin-top: 5%;
     font-size: 17px;
-
 }
 
 .instance button {
@@ -190,26 +239,31 @@ html, body {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
-
-
 }
 
 .instance button a {
     color: inherit;
-    list-style: none;
     text-decoration: none;
 }
 
 .instance h3 {
     font-size: 22px;
-    margin-top: 0; /* Remove margem superior */
-    margin-bottom: 10px; /* Adiciona margem inferior para espaçamento consistente */
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .instance button:hover {
     background-color: #a33;
 }
 
-
-
+/* Adicionando media queries para telas muito pequenas */
+@media (max-width: 480px) {
+    #search_container {
+        flex-direction: column;
+    }
+    .search_button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
  
